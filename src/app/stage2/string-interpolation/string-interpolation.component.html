@@ -1,0 +1,16 @@
+<h1>app-string-interpolation</h1>
+<p>Example 1: {{ ' String '}} </p>
+<p>Example 1: {{ 1+10 }}</p>
+<p>Example 1: {{ '1+10' }}</p>
+<p>Example 1: {{ serverId }}</p>
+<p>Example 1: {{ serverIdMetod() }}</p>
+<p>Example 1: {{textlenght}} is lenght = {{getTextLenght()}}</p>
+<p>Example 1: {{"Product"}} name is {{product.name}} and price {{product.price}} </p>
+<p>Example 1: The value is {{ isActive ? 'ACTIVE' : 'NOY'  }} </p>
+<button [disabled] = "isActive">Click</button>
+<hr>
+<button class="btn btn-primary" (click) = "countPlus()">Count {{count}}</button>
+<hr>
+<button class="btn btn-primary" [disabled] = "statusBtn" >{{!statusBtn}}</button>
+<p [innerText]="statusBtn" ></p>
+

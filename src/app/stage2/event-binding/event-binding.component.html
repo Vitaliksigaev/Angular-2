@@ -1,0 +1,8 @@
+<h1>event-binding works!</h1>
+<button (click)="changeStatus()" class="" [ngStyle]="buttonStyle">{{serverStatus ? 'ON SERVER' : 'OFF SERVER'}}</button>
+<hr>
+<input (input)="onInputChange($event)" (keydown)="onInputKeyDown($event)">
+<p>look in console</p>
+<hr>
+<div (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"> {{divText}}</div>
+

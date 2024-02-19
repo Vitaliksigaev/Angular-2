@@ -1,0 +1,43 @@
+<p>ng-model works!</p>
+<p>ngModel</p>
+<!-- Пример 1  Выбор даты и ее отображение-->
+<!-- <hr>
+<h2>Выбор даты</h2>
+<input [(ngModel)] = 'currentData' type="date">
+<p> Выбранная дата = {{currentData}}</p> -->
+
+<!-- Пример 2  Ввыод и отображение имени-->
+<!-- <h2>Ввод/вывод имени</h2>
+<input [(ngModel)]="userName" type="text">
+<p>Ваше имя : {{ userName}}</p> -->
+
+<!-- Пример 3  Ввыод и отображение имени-->
+<!-- <h2>Выбор пола</h2>
+<label>
+    <input type="radio" [(ngModel)]="gender" value="male">
+    MENS
+</label>
+<label>
+    <input type="radio" [(ngModel)]="gender" value="female">
+    Womens
+</label>
+<p> You selectes gender {{gender}}</p> -->
+
+
+<!-- Example 4 -->
+<!-- <select [(ngModel)]="selectedOption" >
+    <option value="Valueoption1">1</option>
+    <option value="Valueoption2">2</option>
+    <option value="Valueoption3">3</option>
+</select>
+<p> You selected next option {{selectedOption}}</p> -->
+
+
+<!-- Example 5 -->
+<ul>
+    <li *ngFor="let item of items; let i=index">
+        <input  [(ngModel)]="items[i].name" placeholder="Enter item name">
+        <button (click)="removeItem(i)">Remove</button>
+    </li>
+</ul>
+<button (click)="addItem()">Add Items</button>

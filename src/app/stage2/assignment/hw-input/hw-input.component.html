@@ -1,0 +1,5 @@
+<p>hw-input works!</p>
+<input type="text" [(ngModel)]="inputUserName">
+<p>{{inputUserName}}</p>
+<button class="btn btn-primary" [disabled] = "inputUserName === ''" 
+(click)='resetUserName()'> Reset User Name</button>

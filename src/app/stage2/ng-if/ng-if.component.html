@@ -1,0 +1,28 @@
+<h1>ng-if works!</h1>
+<hr>
+<div *ngIf="showElement"> Простой пример когда переменной задано булевое значение для отобрадение в блоке *ngIf="showElement"</div>
+
+<hr>
+<p>Изменение по клику элемента</p>
+<button (click)="showElementClick()">Click</button>
+<p *ngIf="showElementP">First</p>
+<p *ngIf="!showElementP">Second</p>
+
+<hr>
+<p>Комбинирование с другими условиями - создадим кнопку по которой кликая элемент покажется когда кликнули 3 раза</p>
+<button (click)="clickCountPlus()">Ты кликнул {{clickCount}}</button>
+<p *ngIf="showElement && clickCount > 2"> Ты молодец -  и этот блок появляется если ты кликнул больше 3 раз</p>
+
+
+<hr>
+<label> Enter password 'sigaev'</label>
+<input [(ngModel)]='inputPasw' type="text">
+<p *ngIf="inputPasw === 'sigaev'">Ура Вы правильно подобрали пароль</p>
+<p *ngIf="!inputPasw">SORRY Вы не правильно подобрали пароль</p>
+
+<hr>
+<p>Использование NG TEMPLATE</p>
+<p *ngIf="!statusServerA; else noServer">Add</p>
+<ng-template #noServer>
+    <p>REMOVE</p>
+</ng-template>
