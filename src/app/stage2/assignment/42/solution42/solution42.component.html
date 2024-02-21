@@ -1,0 +1,8 @@
+<p>solution42 works!</p>
+<button (click)="clickBtn()">Display ditails </button>
+<p *ngIf="showElement">Secret</p>
+<p *ngFor = " let iten of arrayClick" 
+    [ngStyle] = "{ 'background-color' : iten > 4 ? 'yellow': 'white'}" 
+    [ngClass] = "{  'onBtn': iten > 4 }"
+    > {{iten}}</p>
+

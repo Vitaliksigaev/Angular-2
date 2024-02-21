@@ -1,0 +1,50 @@
+<h1>ng-for works!</h1>
+
+<h2>Итерации по обычному массиву.</h2>
+<div *ngFor = "let item of arrItem">{{item}}</div>
+
+<h2>Итерации по объекту. *ngFor="let keyValuePair of person | keyvalue</h2>
+<!-- <div *ngFor = "let key of Object.keys(person)">{{key}}</div> -->
+<div *ngFor="let keyValuePair of originalObject | keyvalue">
+    {{ keyValuePair.key }} - {{ keyValuePair.value }}
+</div>
+
+<hr>
+<h2>Использование индекса и вывод дополнительного значения в зависимости  от порядка или условий</h2>
+<div *ngFor=" let item of arrItem; let i = index; let isFirst = first; let isLast = last">
+    {{item}} (Index: {{i}}) - {{ isFirst ? 'First': isLast ?  'Last' : 'Not first or last'}}
+</div>
+
+<hr>
+<h2>Использование even и odd</h2>
+<div *ngFor=" let item of arrItem; let i = index; let isEven = even; let isOdd = odd">
+    {{item}} (Index: {{i}}) - {{ isEven ? 'EVEN': 'ODD' }}
+</div>
+
+
+<hr>
+<h2>Использование trackBy</h2>
+<div *ngFor=" let item of arrItem; let i = index; trackBy : trackByFunction">
+    {{item}} - Index: {{i}}) - 
+</div>
+
+
+
+<hr>
+<h2>Использование ngForOf</h2>
+<div *ngFor="let item of arrItem; let i = index; let ngForOf = ngForOf; let ngForIndex = index">
+    <p>Item: {{ item }}</p>
+    <p>ngForOf: {{ ngForOf }}</p>
+    <p>ngForIndex: {{ ngForIndex }}</p>
+
+</div>
+
+
+<hr>
+<h2>Использование trackBy trackByUserId</h2>
+<div *ngFor="let user of users; trackBy: trackByUserId">
+    <p>ID пользователя: {{ user.id }}</p>
+    <p>Имя: {{ user.name }}</p>
+    <p>Возраст: {{ user.age }}</p>
+    <button (click)="deleteUser(user.id)">Удалить</button>
+</div>

@@ -1,0 +1,16 @@
+<h1>ng-class works!</h1>
+<h2> Простое добавление</h2>
+
+<div [ngClass] = "{ 'firstClass' : ngStatus }">Some content</div>
+<hr>
+
+<h2> Add class depend of button</h2>
+<button (click)=" statusBtnChenge() ">{{statusBtn}}</button>
+<p [ngClass] = "{ 'onBtn' : statusBtn == 'ON', 'offBtn' : statusBtn == 'OFF'}">{{statusBtn}}</p>
+
+<h2> Add ARRAY CLASS</h2>
+<div [ngClass] = "arrClass">Some content</div>
+
+
+<h2> Add  CLASS FROM OBJECT</h2>
+<div [ngClass] = "classObject">Some contentSome contentSome contentSome contentSome content</div>

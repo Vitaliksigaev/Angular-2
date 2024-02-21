@@ -18,6 +18,14 @@ import { EventBindingComponent } from './stage2/event-binding/event-binding.comp
 import { HwInputComponent } from './stage2/assignment/hw-input/hw-input.component';
 import { NgIfComponent } from './stage2/ng-if/ng-if.component';
 import { NgStyleComponent } from './stage2/ng-style/ng-style.component';
+import { NgClassComponent } from './stage2/ng-class/ng-class.component';
+import { Solution42Component } from './stage2/assignment/42/solution42/solution42.component';
+import { NgForComponent } from './stage2/ng-for/ng-for.component';
+
+
+import { CommonModule } from '@angular/common';
+import { KeyValuePipe } from '@angular/common';
+
 
 
 @NgModule({
@@ -35,11 +43,15 @@ import { NgStyleComponent } from './stage2/ng-style/ng-style.component';
     EventBindingComponent,
     HwInputComponent,
     NgIfComponent,
-    NgStyleComponent
+    NgStyleComponent,
+    NgClassComponent,
+    Solution42Component,
+    NgForComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
